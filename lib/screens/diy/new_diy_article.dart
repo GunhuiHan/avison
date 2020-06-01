@@ -290,16 +290,13 @@ class _DiyArticleState extends State<DiyArticle> {
                     padding: const EdgeInsets.only(left: 18.0, right: 12),
                     child: Row(
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 4.0),
-                          child: CircleAvatar(
-                            radius: 12,
-                            backgroundColor: Colors.blueGrey[200],
-                            child: Icon(
-                              Icons.person,
-                              size: 16,
-                              color: Colors.white,
-                            ),
+                        CircleAvatar(
+                          radius: 12,
+                          backgroundColor: Colors.blueGrey[200],
+                          child: Icon(
+                            Icons.person,
+                            size: 16,
+                            color: Colors.white,
                           ),
                         ),
                         Expanded(

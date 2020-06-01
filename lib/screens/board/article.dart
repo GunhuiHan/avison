@@ -419,17 +419,14 @@ class _ArticleState extends State<Article> {
                         left: 16.0, top: 2.0, right: 12.0),
                     child: Row(
                       children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 4.0),
-                          child: CircleAvatar(
-                            minRadius: 12,
-                            maxRadius: 14,
-                            backgroundColor: Colors.blueGrey[200],
-                            child: Icon(
-                              Icons.person,
-                              size: 18,
-                              color: Colors.white,
-                            ),
+                        CircleAvatar(
+                          minRadius: 12,
+                          maxRadius: 14,
+                          backgroundColor: Colors.blueGrey[200],
+                          child: Icon(
+                            Icons.person,
+                            size: 18,
+                            color: Colors.white,
                           ),
                         ),
                         Expanded(

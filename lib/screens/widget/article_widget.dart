@@ -108,34 +108,30 @@ Widget updateOrDeleteComment(int boardNum, String articleKey, String commentKey,
 Widget diyUpdateOrDeleteComment(UserData userData, DocumentSnapshot doc,
     String articleKey, BuildContext context) {
   if (doc['uid'] == userData.uid) {
-    return Padding(
-      padding: const EdgeInsets.all(1.0),
-      child: PopupMenuButton<int>(
-        onSelected: (value) {
-          if (value == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context3) =>
-                      DiyCommentEditPage(userData, doc, articleKey)),
-            );
-          }
-          if (value == 2) {
-            deleteDiyCommentAlert(
-                userData, articleKey, doc['time_key'], context);
-          }
-        },
-        itemBuilder: (context) => [
-          PopupMenuItem(
-            value: 1,
-            child: Text("Edit"),
-          ),
-          PopupMenuItem(
-            value: 2,
-            child: Text("Delete"),
-          ),
-        ],
-      ),
+    return PopupMenuButton<int>(
+      onSelected: (value) {
+        if (value == 1) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context3) =>
+                    DiyCommentEditPage(userData, doc, articleKey)),
+          );
+        }
+        if (value == 2) {
+          deleteDiyCommentAlert(userData, articleKey, doc['time_key'], context);
+        }
+      },
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: 1,
+          child: Text("Edit"),
+        ),
+        PopupMenuItem(
+          value: 2,
+          child: Text("Delete"),
+        ),
+      ],
     );
   } else {
     return Text('');
