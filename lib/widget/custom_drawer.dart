@@ -106,7 +106,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(fontSize: 16),
               ),
               trailing: Text(
-                "AVISON 1.0",
+                "AVISON 2.0",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
               ),
               leading: Icon(
